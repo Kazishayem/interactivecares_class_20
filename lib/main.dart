@@ -18,6 +18,11 @@ class MyApp extends StatelessWidget {
         '/home': (context) => HomePage(),
         '/second': (context) => SecondScreen(),
       },
+
+      onUnknownRoute: (settings) => MaterialPageRoute(
+        builder: (_) =>
+            Scaffold(body: Center(child: Text("404-Page not found"))),
+      ),
     );
   }
 }
